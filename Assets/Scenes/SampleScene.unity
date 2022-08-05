@@ -233,9 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40306e9b3ea7ada42b8c32eb7e61f1c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 4
-  height: 4
-  COLOR_AMOUNT: 3
+  width: 10
+  height: 12
+  COLOR_AMOUNT: 5
   Seed: 0
   tilePrefab: {fileID: 6234272219041946866, guid: 27e369bb22a1d264a8b909a1075e0e14,
     type: 3}

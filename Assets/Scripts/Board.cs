@@ -22,7 +22,7 @@ public class Board : MonoBehaviour
         Camera.main.transform.position = new Vector3((float)(width+1)/2, (float)(height+1)/2, -10);
         Camera.main.orthographicSize = Camera.main.transform.position.y;
         allBlocks = new GameObject[width+2, height+2];
-        groups.Add(0, new List<GameObject> { allBlocks[0,0] });
+        groups.Add(0, new List<GameObject> { });
         getRandomColorsInRange();
         Setup();
         padMatrix();
@@ -31,12 +31,12 @@ public class Board : MonoBehaviour
     }
     void getRandomColorsInRange()
     {
-         List<GameObject> tempPrefabs = allPrefabs;
+        List<GameObject> tempPrefabs = allPrefabs;
         for (int i = 0; i < COLOR_AMOUNT; i++)
         {
             int index = Random.Range(0, tempPrefabs.Count);
-            Prefabs.Add(tempPrefabs[i]);
-            tempPrefabs.Remove(tempPrefabs[i]);
+            Prefabs.Add(tempPrefabs[index]);
+            tempPrefabs.Remove(tempPrefabs[index]);
         }
     }
     void Setup()
